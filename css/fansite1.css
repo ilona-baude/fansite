@@ -276,7 +276,18 @@ footer{
         margin: 10px 5px 5px;
         color: aliceblue;
     }
-}
+    .fansite{
+        margin:0;
+        margin-top:5px;
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right:13px;
+            border-radius: 25px;
+        }
+    }
+}   
 
 
 
