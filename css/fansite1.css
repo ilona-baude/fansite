@@ -231,7 +231,7 @@ h1{
         }
     }
     .horizontal{
-        width:450px;
+        width:350px;
         height: 300px;
         padding:10px 25px;
     }
@@ -389,8 +389,10 @@ footer{
         }
     }
 
-    .gallerie-img section{
-        height: 40vh;
+    .gallerie-img{
+        section{
+            height:40vh;
+        }
     }
 
     .gallerie-video{
