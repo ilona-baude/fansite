@@ -272,6 +272,9 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    a{
+        color:aliceblue;
+    }
     p{
         margin: 10px 5px 5px;
         color: aliceblue;
@@ -370,9 +373,20 @@ footer{
     /* wrap la div/boite de la page evenement sans affecter la page actualité grâce à l'id*/
     #boite-evenement{
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
     }
     .evenements{
-        margin: 5%;
+        margin:5% 20px;
+        padding:2%;
+        width: 40%;
+        .event-img{
+            width:100%;
+            height:350px;
+            img{
+                object-fit: cover;
+            }
+        }
     }
 
     .gallerie-img section{
