@@ -1,0 +1,418 @@
+html {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+body {
+    width: 100%;
+    display: table-cell;
+    background: linear-gradient(rgb(85, 182, 238),rgb(108, 233, 108),rgb(248, 228, 45));
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 2%;
+    padding-bottom: 2%;
+    background-color: #222831;
+    color: #fff;
+    display:flex;
+    justify-content: center;
+
+    /*click to show menu*/
+    .checkbtn {
+        display:flex;
+        justify-content: center;
+        color:white;
+        cursor: pointer;
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            padding: 5%;
+            background-color: beige;
+        }
+    }
+    
+    ul {
+        display: none;
+    }
+
+    /*cache la checkbox derriere l'image */
+    .hidden{
+        position: absolute;
+        top:1%;
+        left:5%;
+        opacity: 0;  
+    }
+
+    /*affiche le menu*/
+    #check:checked ~ ul {
+        display: block;
+        overflow: hidden;
+    }
+
+    /*menu style*/
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        position: absolute;
+        background: #222831;
+        z-index: 1;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+       }
+    ul a {
+        border-top: outset #05142b;
+        color: #fff;
+        font-size: 2rem;
+        padding: 5% 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+       }
+    
+    .pages{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        a{
+            margin: 2%;
+            border-top: none;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            margin: 10px 5px 5px 5px;
+            border-radius: 25px;
+        }
+    }
+
+}
+
+main {
+    margin-top: 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2.5rem
+}
+
+/*fansite1*/
+h1{
+    text-align:center;
+}
+.acceuil-img {
+    max-width: 80%;
+    overflow: hidden;
+    img{
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+}
+
+.acceuil{
+    p{
+        text-align: center;
+        margin:5%;
+        padding: 2%;
+        border-radius: 12px;
+        background-color: antiquewhite;
+    }
+}
+
+.best-of-title{
+    background-color: beige;
+    font-size: larger;
+    padding: 5px 8px;
+    border-radius: 8px;
+    margin-bottom: 10%;
+}
+.best-of{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        text-align: center;
+        background-color: beige;
+        border-radius: 5px;
+    }
+}
+
+.actualite {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: azure;
+    margin:3%;
+    margin-bottom:15%;
+    section{
+        margin:5%;
+        img{
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+.boite{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.evenements{
+    background-color: aliceblue;
+    margin:10% 0;
+    padding:5%;
+    width: 250px;
+    p{
+        background-color: #323f53;
+        color: rgb(136, 179, 236);
+        padding: 2%;
+    }
+    .event-img{
+        width:245px;
+        height:150px;
+        border-style: double;
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.gallerie-img{
+    /*vertical and horizontal img fit nicely together by stretching them to fill in the container*/
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+    section{
+        height:20vh;
+        flex-grow: 1;
+        margin: 2%;
+        img{
+            min-width:100%;
+            max-height:100%;
+            object-fit: cover;
+            vertical-align: bottom;
+            border-radius: 8px;
+        }
+    }
+}
+
+
+.gallerie-video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section{
+        display: flex;
+        justify-content: center;
+        width:300px;
+        height:450px;
+        background-color: #222831;
+        border-radius: 8px;
+        padding: 10px 5px;
+        margin: 5% 0;
+        video{
+            border-color: aliceblue;
+            border-style: ridge;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor:pointer
+        }
+    }
+    .horizontal{
+        width:350px;
+        height: 300px;
+        padding:10px 25px;
+    }
+} 
+
+.space{
+    margin-bottom:3rem;
+}
+    
+aside{
+    display: flex;
+    justify-content: center;
+}
+#sns{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 2.5rem;
+    section{
+        margin-left:2%;
+        border-style: none;
+    }
+    img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        margin: 10px 5px 5px 5px;
+        border-radius: 25px;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    background-color: #222831;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a{
+        color:aliceblue;
+    }
+    p{
+        margin: 10px 5px 5px;
+        color: aliceblue;
+    }
+    .fansite{
+        margin:0;
+        margin-top:5px;
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right:13px;
+            border-radius: 25px;
+        }
+    }
+}   
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:720px){
+    nav{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        padding: 20px;
+        ul{
+            display:block;
+            top:15px;
+            left:15px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            .checkbtn{
+                display: none;
+            }
+        
+            li {
+                display:block;
+                text-align: center;
+                float: left;   
+            }
+        
+            li a {
+                border-top: none;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 10px 12px;
+                text-decoration: none;
+            }
+
+            .pages{
+                margin-left: 23%;
+                img{
+                    width: 35px;
+                    height: 35px;
+                    margin: 0%;
+                    padding: 3px;
+                    background-color: aliceblue;
+                }
+            }
+        
+            /* Change block color on hover */
+            li a:hover {
+                background-color: #6b2957;
+                border-radius: 20px;
+            }
+        
+        }
+    }
+    main{
+        margin-top: 10%;
+    }
+    .best-of-title{
+        margin-bottom: 2%;
+    }
+    .best-of{
+        flex-direction: row;
+        justify-content: center;
+        section{
+            margin: 0 5%
+        }
+    }
+    .boite{
+        flex-direction: row;
+    }
+
+    /* wrap la div/boite de la page evenement sans affecter la page actualité grâce à l'id*/
+    #boite-evenement{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .evenements{
+        margin:5% 20px;
+        padding:2%;
+        width: 40%;
+        .event-img{
+            width:100%;
+            height:350px;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+
+    .gallerie-img{
+        section{
+            height:40vh;
+        }
+    }
+
+    .gallerie-video{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        section{
+            margin:5%;
+        }
+        .horizontal{
+            width: 720px;
+            height:430px;
+        }
+    }
+    
+    #sns{
+        position: static;
+    }
+    footer{
+        position:static;
+        bottom: 0px;
+    }
+}

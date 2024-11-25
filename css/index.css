@@ -1,0 +1,172 @@
+@font-face{
+    font-family:"Watermelon";
+    src: url("fonts/bright-violet-font/BrightViolet-VG8ew.ttf");
+}
+
+
+body{
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color: rgb(21, 27, 90);
+    overflow-x: hidden;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 7mm;
+    .desktop-nav{
+        font-family: Watermelon;
+        font-style: bold;
+        font-size: 13mm;
+    }
+    .checkbtn {
+        display:none;
+    }
+    .hidden{
+        display: none;
+    }
+    ul{
+        display:none;
+    }
+}
+
+main{
+    display:flex;
+    justify-content:space-around;
+}
+
+article{
+    background-color: rgb(17, 35, 92);
+    margin: 8% 0;
+    height: fit-content;
+    padding:2%;
+    border-radius: 8px;
+    img{
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+    }
+    p{
+        width:95%;
+        background-color: rgb(164, 190, 211);
+        padding: 2%;
+        text-align: center;
+    }
+
+}
+
+footer{
+    background-color: rgb(21, 27, 90);
+    width: 100%;
+    padding:2%;
+    a{
+        color:whitesmoke;
+    }
+}
+
+@media screen and (max-width:720px) {
+    body{
+        max-width: 100%;
+    }
+    nav{
+        margin-bottom: 10%;
+        max-width: 100%;
+        .desktop-nav{
+            display: none;
+        }
+        /*click to show menu*/
+        .checkbtn {
+            display:flex;
+            justify-content: center;
+            color:white;
+            cursor: pointer;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 25px;
+                padding: 5%;
+            }
+        }
+        
+        ul {
+            display: none;
+        }
+
+        /*overlays checkbox on the label and keeps it hidden with 0 opacity*/
+        .hidden{
+            position: absolute;
+            top:1%;
+            opacity: 0;  
+        }
+
+        /*toggles menu*/
+        #check:checked ~ ul {
+            display: block;
+            overflow: hidden;
+        }
+
+        /*menu style*/
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: #0d2344;
+            z-index: 1;
+            top: 60px;
+            left: 0px;
+        }
+        ul a {
+            border-top: outset #05142b;
+            color: #fff;
+            font-size: 2rem;
+            padding: 5% 0;
+            display: block;
+            text-align: center;
+        }
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    article{
+        width:80%;
+        height:40%;
+        padding:10% 5%;
+        img{
+            width: 320px;
+            height: 200px;
+            object-fit: contain;
+        }
+    }
+}
+
+/*background animation*/
+
+body {
+    /*set gradient color + direction (degree)*/
+    background: linear-gradient(142deg, #160768, #750675, #120fc4, #2286e4, #bf16e0);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: color-gradient 30s ease infinite;
+    -moz-animation: color-gradient 30s ease infinite;
+    animation: color-gradient 30s ease infinite;
+}
+
+@-webkit-keyframes color-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes color-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes color-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
